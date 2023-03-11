@@ -7,9 +7,12 @@ export default function App(){
         <div>
             <div>Counter: {counter}</div>
             <button onClick={() => {
-                console.log(counter);
+                //console.log(counter);
+                setCounter(counter + 1);
             }}>+</button>
-            <button>-</button>
+            <button onClick={() => {
+                setCounter(counter -1);
+            }}>-</button>
         </div>
-    )
-}
+    );
+};
