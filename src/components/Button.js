@@ -9,12 +9,21 @@ export default function App(){
                 fontSize:'2rem',
             }}>This is task 2 - button turn on and off!
             </h1>
-            <button style={{ // in react as style we are making json object
+            <button 
+                style = {{ // in react as style we are making json object
                 marginTop:'0.2rem',
-                color:'red',
+                color: state == 'on' ? 'green' : 'red',
                 border: 'unset',
                 fontSize:'2rem',
-            }}>{state}</button>
+            }}
+                onClick={() => {
+                    if(state == 'off'){
+                        setState('on');
+                    }else {
+                        setState('off')
+                    }
+                }}
+            >{state}</button>
         </div>
     );
 }
