@@ -10,6 +10,14 @@ import React,{useState} from "react";
 //under every field must display error msg.
 
 export default function App(){
+    const [neme, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [passwordConfirm, setPasswordConfirm] = useState('');
+    const [city, setCity] = useState('');
+    const [gender, setGender] = useState('');
+    const [music, setMusic] = useState([]);
+ 
     return(
         <div>
             <h3>RegForm</h3>
@@ -53,7 +61,7 @@ export default function App(){
                     <input type="checkbox" />
                 </div>
                 <div>
-                    <button>Registration</button>
+                    <button type ="button">Registration</button>
                 </div>
             </form>
         </div>
