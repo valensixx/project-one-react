@@ -10,7 +10,7 @@ import React,{useState} from "react";
 //under every field must display error msg.
 //test changes
 export default function App(){
-    const [neme, setName] = useState('');
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordConfirm, setPasswordConfirm] = useState('');
@@ -69,16 +69,66 @@ export default function App(){
                     <span style={color}>{errors.gender}</span>
                 </div>
                 <div>
+                    <div>{JSON.stringify(music)}</div>
                     <label>Rap</label>
-                    <input type="checkbox" />
+                    <input onClick={(e)=>{
+                        if(e.target.checked == true){
+                            setMusic([...music, 'rap'])
+                        } else {
+                            setMusic(music.filter(m => m!= 'rap'));
+                        }
+                    }} type="checkbox" />
                     <label>Rock</label>
-                    <input type="checkbox" />
+                    <input onClick={(e)=>{
+                        if(e.target.checked == true){
+                            setMusic([...music, 'rock'])
+                        } else {
+                            setMusic(music.filter(m => m!= 'rock'));
+                        }
+                    }} type="checkbox" />
                     <label>POP</label>
-                    <input type="checkbox" />
+                    <input onClick={(e)=>{
+                        if(e.target.checked == true){
+                            setMusic([...music, 'pop'])
+                        } else {
+                            setMusic(music.filter(m => m!= 'pop'));
+                        }
+                    }} type="checkbox" />
                     <span style={color}>{errors.music}</span>
                 </div>
                 <div>
-                    <button type ="button">Registration</button>
+                    <button onClick={() =>{
+                        let err = errors;
+                        if(name.lenght < 4){
+                            err.name = 'invalid name';
+                        }else{
+                            err.name ='';
+                        }
+
+                        if(email == ''){
+                            err.email= 'invalide email';
+                        }else{
+                            err.email='';
+                        }
+
+                        if(password == '' || password != passwordConfirm){
+                            err.password = 'invalid password';
+                        }else{
+                            err.password = '';
+                        }
+
+                        if(city == ''){
+                            err.city = 'invalid city';
+                        }else{
+                            err.city = '';
+                        }
+
+                        if(gender == ''){
+                            
+                        }
+
+                        setErrors({...errors, err}); // object asign
+                    }} type ="button">Registration</button>
                 </div>
             </form>
         </div>
