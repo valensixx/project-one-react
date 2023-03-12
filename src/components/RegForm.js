@@ -8,11 +8,28 @@ import React,{useState} from "react";
 //city and gender must be selected
 //there must be selected at least one music style
 //under every field must display error msg.
- 
+
 export default function App(){
     return(
         <div>
-
+            <form>
+                <div>
+                    <label>Name</label>
+                    <input type="text" />
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="text" />
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="number" />
+                </div>
+                <div>
+                    <label>Repeat Password</label>
+                    <input type="number" />
+                </div>
+            </form>
         </div>
     );
 };
