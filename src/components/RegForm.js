@@ -8,7 +8,7 @@ import React,{useState} from "react";
 //city and gender must be selected
 //there must be selected at least one music style
 //under every field must display error msg.
-
+//test changes
 export default function App(){
     const [neme, setName] = useState('');
     const [email, setEmail] = useState('');
