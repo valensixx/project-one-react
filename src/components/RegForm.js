@@ -12,6 +12,7 @@ import React,{useState} from "react";
 export default function App(){
     return(
         <div>
+            <h3>RegForm</h3>
             <form>
                 <div>
                     <label>Name</label>
@@ -23,11 +24,36 @@ export default function App(){
                 </div>
                 <div>
                     <label>Password</label>
-                    <input type="number" />
+                    <input type="password" />
                 </div>
                 <div>
                     <label>Repeat Password</label>
-                    <input type="number" />
+                    <input type="password" />
+                </div>
+                <div>
+                    <label>City</label>
+                    <select>
+                        <option value ="">Select city</option>
+                        <option value ="Plovdiv">Plovdiv</option>
+                        <option value ="Sofia">Sofia</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Male</label>
+                    <input type="radio" name="gender" />
+                    <label>Female</label>
+                    <input type="radio" name="gender" />
+                </div>
+                <div>
+                    <label>Rap</label>
+                    <input type="checkbox" />
+                    <label>Rock</label>
+                    <input type="checkbox" />
+                    <label>POP</label>
+                    <input type="checkbox" />
+                </div>
+                <div>
+                    <button>Registration</button>
                 </div>
             </form>
         </div>
