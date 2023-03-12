@@ -24,9 +24,9 @@ export default class App extends React.Component {
                     border: '1px solid black',
                     marginTop: "1rem",
                 }}>
-                <input type="text" onChange={(e) => this.setState({text: e.target.value})}></input>
-                <div>{this.state.text}</div>
                 </div>
+                <input style={{marginTop: "1rem",}} type="text" onChange={(e) => this.setState({text: e.target.value})}></input>
+                <div>{this.state.text}</div>
             </div>
         );
     }
