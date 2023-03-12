@@ -124,7 +124,15 @@ export default function App(){
                         }
 
                         if(gender == ''){
-                            
+                            err.gender = 'choose gender';
+                        }else{
+                            err.gender = '';
+                        }
+
+                        if(music.length == 0){
+                            err.music = 'invalid music'
+                        }else{
+                            err.music = '';
                         }
 
                         setErrors({...errors, err}); // object asign
