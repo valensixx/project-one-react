@@ -5,6 +5,7 @@ import Button from './components/Button';
 import ColorPicker from './components/ColorPicker';
 import RegForm from './components/RegForm';
 import Page from './components/Page';
+import Home from './components/pages/home/Home';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,6 +16,7 @@ root.render(
     <ColorPicker />
     <RegForm />
     <Page />
+    <Home />
   </React.StrictMode>
 );
 
