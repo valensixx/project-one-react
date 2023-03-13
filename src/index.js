@@ -6,6 +6,7 @@ import ColorPicker from './components/ColorPicker';
 import RegForm from './components/RegForm';
 import Page from './components/Page';
 import Home from './components/pages/home/Home';
+import Footer from './components/footer/Footer';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,6 +18,7 @@ root.render(
     <RegForm />
     <Page />
     <Home />
+    <Footer/>
   </React.StrictMode>
 );
 
