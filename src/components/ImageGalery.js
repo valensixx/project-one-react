@@ -7,7 +7,17 @@ export default function ImageGalery(){
     const [selectedIndex, setSelectedIndex] = useState(0);
     return(
         <div>
-            <img src={images[selectedIndex]} />
+            <img 
+                src={images[selectedIndex]} 
+                style={{width: '100%'}}
+            />
+            <button onClick={() => {
+                if(selectedIndex === images.length - 1){
+                    setSelectedIndex = 0;
+                } else {
+                    setSelectedIndex(selectedIndex + 1);
+                }
+            }}>Next</button>
         </div>
     );
 };
