@@ -7,7 +7,7 @@ import RegForm from './components/RegForm';
 import Page from './components/Page';
 import Home from './components/pages/home/Home';
 import Footer from './components/footer/Footer';
-
+import ImageGalery from './components/ImageGalery';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,7 +18,8 @@ root.render(
     <RegForm />
     <Page />
     <Home />
-    <Footer/>
+    <Footer />
+    <ImageGalery />
   </React.StrictMode>
 );
 
