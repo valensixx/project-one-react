@@ -1,0 +1,24 @@
+.menu-nav {
+    background: #333;
+}
+
+.menu-nav-ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-nav-item {
+    margin:0 1rem;
+}
+
+.menu-nav-item a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-nav-item a:hover {
+    color: blueviolet;
+}
